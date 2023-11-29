@@ -20,7 +20,7 @@ const EditModal = ({ isOpen, onclose, setTodoList, clickedItem }) => {
       setValue({
         title: clickedItem.title,
         content: clickedItem.content,
-        updatedAt: clickedItem.updatedAt || dayjs().format('YYYY.MM.DD HH:mm'), // 수정된 날짜 설정
+        updatedAT: clickedItem.updatedAT || dayjs().format('YYYY.MM.DD HH:mm'), // 수정된 날짜 설정
       });
     }
   }, [clickedItem]);
@@ -41,7 +41,7 @@ const EditModal = ({ isOpen, onclose, setTodoList, clickedItem }) => {
       ...clickedItem,
       title: value.title,
       content: value.content,
-      updatedAt: dayjs().format('YYYY.MM.DD HH:mm'),
+      updatedAT: dayjs().format('YYYY.MM.DD HH:mm'),
     };
 
     // TodoList를 업데이트하는 함수

@@ -42,7 +42,7 @@ const CreateModal = ({ isOpen, onclose, setTodoList, todoList }) => {
             ...item,
             title: value.title,
             content: value.content,
-            updatedAt: dayjs().format('YYYY.MM.DD HH:mm'),
+            updatedAT: dayjs().format('YYYY.MM.DD HH:mm'),
           };
         }
         return item;

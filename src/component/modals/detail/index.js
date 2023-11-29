@@ -15,7 +15,7 @@ function DetailModal({ isOpen, onclose, item }) {
         <h1 className="modalTitle">생성 날짜</h1>
         <p>{item.createdAT}</p>
         <h1 className="modalTitle">수정 날짜</h1>
-        <p>{item.updatedAt}</p> {/* 수정된 날짜 표시 */}
+        <p>{item.updatedAT}</p> {/* 수정된 날짜 표시 */}
         <h1 className="modalTitle">중요, 완료 여부</h1>
         <p>
           {item.isFavorite ? '중요' : '안중요'} : {item.isComplete ? '완성' : '미완성'}
