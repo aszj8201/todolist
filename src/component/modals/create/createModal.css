@@ -1,0 +1,103 @@
+.createModalWrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+aside h1 {
+  text-align: left;
+  width: 100%;
+}
+
+aside {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+aside form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.createModalWrapper input {
+  outline: none;
+  padding: 12px;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #aaa;
+  font-size: 16px;
+}
+
+.createModalWrapper input:not(:placeholder-shown) {
+  border-color: rgb(124, 111, 214);
+}
+
+.createModalWrapper input:focus-visible {
+  border-color: slateblue;
+}
+
+.createModalWrapper input:hover {
+  border-color: rgba(106, 90, 205, 0.4);
+}
+
+.createModalWrapper textarea {
+  resize: none;
+  outline: none;
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.createModalWrapper textarea:focus-visible {
+  border-color: slateblue;
+}
+
+.createModalWrapper textarea:not(:placeholder-shown) {
+  border-color: rgb(124, 111, 214);
+}
+
+.createModalWrapper textarea:hover {
+  border-color: rgba(106, 90, 205, 0.4);
+}
+
+.createModalWrapper button {
+  outline: none;
+  width: 100%;
+  user-select: none;
+  margin-top: auto;
+  font-size: 20px;
+  background-color: slateblue;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 20px;
+}

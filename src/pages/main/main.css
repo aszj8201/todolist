@@ -1,0 +1,163 @@
+main {
+  width: 100%;
+  min-height: 108%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 32px auto 0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.topNavbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.topNavbar > time {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.addButton {
+  user-select: none;
+  outline: none;
+  border: 1px solid #c2c2d4;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888597;
+  background-color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 8px;
+}
+
+.addButton:not(:hover) {
+  scale: 0.9;
+  transition: 0.5s ease-in-out;
+}
+
+.addButton:hover {
+  transition: 0.5s ease-in-out;
+}
+
+.todoList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  border-top: 2px solid #aaaaaa;
+  padding-top: 60px;
+}
+
+.todoItem {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.todoItem:not(.complete):hover {
+  bottom: 4px;
+  right: 4px;
+}
+
+.todoTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.todoItem + .todoItem {
+  margin-top: 20px;
+}
+
+.todoItem.favorite {
+  box-shadow: rgba(250, 151, 121, 0.7) 0px 5px 15px;
+  background-color: rgb(255, 246, 232);
+}
+
+.todoItem.complete {
+  background-color: #eeeeee;
+}
+
+.todoItem Button {
+  user-select: none;
+  outline: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.todoItem button + button {
+  margin-left: 8px;
+}
+
+.specialButton {
+  color: rgb(56, 90, 1);
+  border: 1px solid rgb(56, 90, 1);
+}
+
+.specialButton:hover {
+  color: #6ca115;
+  border: 1px solid #6ca115;
+}
+
+.completeButton {
+  color: brown;
+  border: 1px solid brown;
+}
+
+.completeButton:hover {
+  color: rgb(235, 125, 125);
+  border: 1px solid rgb(235, 125, 125);
+}
+
+.deleteButton {
+  color: #f42d16;
+  border: 1px solid #f42d16;
+}
+
+.deleteButton:hover {
+  color: #ec7b6e;
+  border: 1px solid #ec7b6e;
+}
+
+.editButton {
+  color: #808080;
+  border: 1px solid #808080;
+}
+
+.editButton:hover {
+  color: #aaaaaa;
+  border: 1px solid #aaaaaa;
+}
+
+.createdDate {
+  font-size: 12px;
+  font-weight: 400;
+  color: gray;
+}
+
+.emptyText {
+  font-size: 32px;
+  font-weight: 600;
+  color: gray;
+}
