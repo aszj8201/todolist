@@ -61,7 +61,7 @@ const EditModal = ({ isOpen, onclose, setTodoList, clickedItem }) => {
           <h1 className="modalTitle">제목</h1>
           <input type="text" placeholder="제목을 입력해주세요" name="title" value={value.title} onChange={onChange} />
           <h1 className="modalTitle">내용</h1>
-          <textarea placeholder="내용을 입력해주세요." rows={12} name="content" value={value.content} onChange={onChange} />
+          <textarea placeholder="내용을 입력해주세요." maxLength={300} rows={12} name="content" value={value.content} onChange={onChange} />
           <button type="submit">수정</button>
         </form>
       </aside>

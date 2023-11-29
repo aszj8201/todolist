@@ -43,7 +43,8 @@ aside form {
   border: 2px solid slateblue;
   border-radius: 4px;
   padding: 12px;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: normal;
 }
 
 .editModalWrapper button {
@@ -58,4 +59,5 @@ aside form {
   cursor: pointer;
   color: #ffffff;
   padding: 20px;
+  margin-bottom: 20px;
 }

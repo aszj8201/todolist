@@ -76,8 +76,13 @@ h1 {
   right: 4px;
 }
 
+.todoitemlist {
+  display: flex;
+  align-items: center;
+}
+
 .todoTitle {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 20px;
   cursor: pointer;
