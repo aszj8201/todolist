@@ -19,6 +19,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   margin-top: 32px;
+  margin-bottom: 10px;
 }
 
 .topNavbar > time {
@@ -47,14 +48,42 @@ h1 {
   transition: 0.5s ease-in-out;
 }
 
+.sort {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sortList {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sortdiv {
+  display: flex;
+  align-items: center;
+}
+
+.sortdiv p {
+  margin-right: 12px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.sortimg {
+  width: 20px;
+  height: 20px;
+}
+
 .todoList {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
   border-top: 2px solid #aaaaaa;
-  padding-top: 60px;
+  padding-top: 5px;
+  margin-top: 10pxx;
 }
 
 .todoItem {

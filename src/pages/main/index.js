@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { DetailModal, CreateModal, EditModal } from 'component/modals';
+import React, { useState, useEffect } from 'react';
+import { DetailModal, CreateModal, EditModal, SortModal } from 'component/modals';
 import TopInfo from './topInfo';
 import TodoItem from './todoitem';
 import Empty from './empty';
@@ -9,6 +9,7 @@ function MainPage() {
   const [clickedItem, setClickedItem] = useState(null);
   const [isOpenCreateModal, setIsOpenCreateModal] = useState(false);
   const [isOpenEditmodal, setisOpenEditmodal] = useState(false);
+  const [isOpenSortingModal, setIsOpenSortingModal] = useState(false);
   const [todoList, setTodoList] = useState(() => {
     const savedTodoList = localStorage.getItem('todoList');
     return savedTodoList ? JSON.parse(savedTodoList) : [];
@@ -28,6 +29,8 @@ function MainPage() {
     if (key === 'detail') setClickedItem(null);
     if (key === 'create') setIsOpenCreateModal(false);
     if (key === 'Edit') setisOpenEditmodal(false);
+    if (key === 'sort') setIsOpenSortingModal(false);
+    console.log('asdasd');
     setClickedItem(null);
   };
 
@@ -73,6 +76,7 @@ function MainPage() {
       onCloseModal('detail');
       onCloseModal('create');
       onCloseModal('Edit');
+      onCloseModal('sort');
     }
   };
 
@@ -86,6 +90,8 @@ function MainPage() {
       <main>
         <TopInfo onClickAdd={onClickAdd} />
         <section className="todoList">
+          <p>정렬 옵션</p>
+          <img className="sortimg" src="https://static-00.iconduck.com/assets.00/sort-icon-512x410-1kpy040x.png" alt="" />
           {todoList.map((item) => (
             <TodoItem
               key={item.id}
@@ -100,6 +106,7 @@ function MainPage() {
           <Empty view={todoList.length === 0} />
         </section>
       </main>
+      <SortModal isOpen={isOpenSortingModal} onClose={() => setIsOpenSortingModal('sort')} setTodoList={setTodoList} todoList={todoList} />
       <DetailModal isOpen={!!clickedItem} onclose={() => onCloseModal('detail')} item={clickedItem} />
       <CreateModal isOpen={isOpenCreateModal} onclose={() => setIsOpenCreateModal(false)} setTodoList={setTodoList} todoList={todoList} />
       <EditModal isOpen={isOpenEditmodal} onclose={() => onCloseModal('Edit')} setTodoList={setTodoList} clickedItem={clickedItem} onClickEdit={onClickEdit} />
